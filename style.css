@@ -1,0 +1,65 @@
+body {
+    background-color: aqua;
+}
+
+.card {
+    margin: auto;
+    max-width: 400px;
+    padding: 20px;
+    border-radius: 15px;
+}
+
+h1, h2 {
+    font-size: 24px;
+}
+
+.qr-image {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+#history .card {
+    width: 200px;
+}
+
+#history .card-body {
+    padding: 10px;
+}
+
+#history .btn {
+    width: 100%;
+    margin-top: 5px;
+}
+
+#contact-container .card {
+    margin: auto;
+    max-width: 400px;
+}
+
+#contact-container .form-group {
+    margin-bottom: 15px;
+}
+
+#contact-container .btn {
+    margin-top: 10px;
+}
+
+#qrcode {
+    margin-top: 20px;
+    padding-left: 30px;
+}
+ 
+#contact-qrcode
+ {
+
+    margin-top: 20px;
+    padding-left: 30px;
+ }
+
+ #plain-text-qrcode
+ {
+    
+    margin-top: 20px;
+    padding-left: 30px;
+ }

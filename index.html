@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR Code Generator</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="card shadow-sm">
+            <div class="card-body">
+                <h1 class="card-title text-center mb-4">QR Code Generator</h1>
+                <div class="form-group">
+                    <input type="text" id="text" class="form-control" placeholder="Enter text or URL">
+                </div>
+                <button id="generate" class="btn btn-primary btn-block">Generate QR Code</button>
+                <div id="qrcode" class="text-center mt-4"></div>
+                <a id="download" class="btn btn-success btn-block mt-3 d-none" download="qrcode.png">Download QR Code</a>
+                <button id="toggle-history" class="btn btn-secondary btn-block mt-4">Show History</button>
+                <button id="toggle-contact" class="btn btn-info btn-block mt-4">Contact QR </button>
+                <button id="toggle-plain-text" class="btn btn-warning btn-block mt-4">Show Plain Text QR Section</button>
+            </div>
+        </div>
+
+        <!-- Contact QR Section -->
+        <div id="contact-container" class="mt-5 d-none">
+            <div class="card shadow-sm">
+                <div class="card-body">
+                    <h2 class="text-center">Generate Contact QR</h2>
+                    <div class="form-group">
+                        <input type="text" id="contact-name" class="form-control" placeholder="Enter name">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="contact-phone" class="form-control" placeholder="Enter phone number">
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="contact-email" class="form-control" placeholder="Enter email">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="contact-address" class="form-control" placeholder="Enter address">
+                    </div>
+                    <button id="generate-contact" class="btn btn-primary btn-block">Generate Contact QR Code</button>
+                    <div id="contact-qrcode" class="text-center mt-4"></div>
+                    <a id="download-contact" class="btn btn-success btn-block mt-3 d-none" download="contact_qrcode.png">Download Contact QR Code</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Plain Text QR Section -->
+        <div id="plain-text-container" class="mt-5 d-none">
+            <div class="card shadow-sm">
+                <div class="card-body">
+                    <h2 class="text-center">Generate Plain Text QR</h2>
+                    <div class="form-group">
+                        <input type="text" id="plain-text-input" class="form-control" placeholder="Enter plain text">
+                    </div>
+                    <button id="generate-plain-text" class="btn btn-primary btn-block">Generate Plain Text QR Code</button>
+                    <div id="plain-text-qrcode" class="text-center mt-4"></div>
+                    <a id="download-plain-text" class="btn btn-success btn-block mt-3 d-none" download="plain_text_qrcode.png">Download Plain Text QR Code</a>
+                </div>
+            </div>
+        </div>
+
+        <div id="history-container" class="mt-5 d-none">
+            <h2 class="text-center">QR Code History</h2>
+            <div id="history" class="d-flex flex-wrap justify-content-center"></div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+    <script src="script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
